@@ -19,10 +19,10 @@ app.post('/insert', (reques,response) =>{
 
 // read
 app.get('/getAll', (request,response) =>{
-    response.json({
-        success: true
+    const db = dbService.getDbServiceInstance();
 
-    });
+    const result = db.getAllData();
+    
 })
 
 // update
